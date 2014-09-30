@@ -1,0 +1,87 @@
+﻿@model RVVL.Models.Client
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>ColorRed Registration</title>
+
+    <link href="/Content/Site.css" rel="stylesheet" />
+</head>
+<body>
+    <div style="margin:0;padding:30px">
+        <h1>Details</h1>
+
+        <fieldset>
+            <legend>Client</legend>
+
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.FirstName)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.FirstName)
+            </div>
+
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.LastName)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.LastName)
+            </div>
+
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.Address)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.Address)
+            </div>
+
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.City)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.City)
+            </div>
+
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.State)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.State)
+            </div>
+
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.Zip)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.Zip)
+            </div>
+
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.Email)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.Email)
+            </div>
+
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.Phone)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.Phone)
+            </div>
+        </fieldset>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.ClientID }) |
+            @Html.ActionLink("Back to List", "Create")
+        </p>
+    </div>
+
+    <footer>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p>&copy; 2014 - ColorRed</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

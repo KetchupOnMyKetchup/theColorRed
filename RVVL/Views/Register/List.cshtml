@@ -1,0 +1,94 @@
+﻿@model IEnumerable<RVVL.Models.Client>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>ColorRed Registration</title>
+
+    <link href="/Content/Site.css" rel="stylesheet" />
+</head>
+<body>
+    <div style="margin:0;padding:30px">
+        <img src="/images/logo.jpg" alt="ColorRed" />
+
+        <h1>List</h1>
+
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <table>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Address)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.City)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.State)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Zip)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Phone)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LastName)
+                    </td>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.Address)
+                    </th>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.City)
+                    </th>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.State)
+                    </th>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.Zip)
+                    </th>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Phone)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ClientID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.ClientID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ClientID })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+
+    <footer>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p>&copy; 2014 - ColorRed</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
